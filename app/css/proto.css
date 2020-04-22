@@ -1,0 +1,129 @@
+.main__sidebar{
+    position: fixed;
+    left: 40px;
+    z-index: 10;
+    opacity: 0;
+    animation-name: SlideInFromLeft;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.sidebar__cards{
+    box-sizing: border-box;
+    opacity:0.6;
+    width: 200px;
+    height: 240px;
+    box-shadow: 12px 12px 32px -7px #a4a6aa;
+    background-color: #f3f4f6;
+    color: #0e1a2a;
+    position:relative;
+
+    transition: ease 200ms;
+}
+
+.sidebar__cards:hover{
+    opacity:1.0;
+}
+
+.card_header{
+    box-sizing: border-box;
+    width:100%;
+    height:45%;
+    /* border:solid 1px black; */
+    text-align: left;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.card_body{
+    width:100%;
+    height:35%;
+    border-radius: 10px;;
+}
+
+.cf::after{
+    content : " ";
+    display : block;
+    clear : both;
+}
+
+.card_profilepic{
+    float:left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width:45%;
+    height:100%;
+
+
+    /* border:solid 1px black; */
+}
+
+.profile_pic{
+   width: 80px;
+   height: auto;
+   box-sizing: border-box;
+   border: #c4c6ca 1px solid;
+}
+
+
+.card_profile{
+    float:left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width:55%;
+    height:100%;
+
+}
+
+.profile_name{
+    background-color: #00dd54;
+    height: 30px;
+    width: 95%;
+
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+.profile_development{
+    box-sizing: border-box;
+    height: 30px;
+    width: 95%;
+    border: 1px solid #0e1a2a;
+    border-left: none;
+    color: #0e1a2a;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+.card_jobtitle{
+    width:100%;
+    height:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.jobtitle{
+    color:#0E1A2A;;
+    width:90%;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+
+}
+/* アニメーション */
+@keyframes SlideInFromLeft{
+    0% {
+        transform: translateX(-400px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+s    }
+}
